@@ -1,7 +1,10 @@
-.title {
-    color:rgb(29, 131, 97)
+body {
+  background-image: url("/images/cool-background1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
-canvas {
-    background-color:black
+.title {
+    color:rgb(51, 159, 123)
 }
