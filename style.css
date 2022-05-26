@@ -1,14 +1,23 @@
 body {
-  background-image: url("/images/cool-background1.png");
+  background-color: #FFE4DE;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
 }
 
-.title {
+#title {
     color:rgb(51, 159, 123)
 }
 
-.myCanvas{
-    border
+#Canvas{
+  width: 1000px;
+  height: 500px;
+  border: solid #000;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #FFE4DE;
+  padding: 20px 10px;
+  border: solid rgb(174, 149, 149);
 }
