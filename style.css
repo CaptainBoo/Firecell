@@ -9,15 +9,30 @@ body {
     color:rgb(51, 159, 123)
 }
 
-#Canvas{
-  width: 1000px;
-  height: 500px;
-  border: solid #000;
+.header {
+  background-color: #FFE4DE;
+  border: solid rgb(174, 149, 149)
+  padding: 10px 20px;
 }
 
-.header {
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  background-color: #FFE4DE;
-  padding: 20px 10px;
-  border: solid rgb(174, 149, 149);
+}
+
+li {
+	float: left
+}
+
+li a {
+	display: block
+	text-align: center;
+	padding: 15px 30px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: rgb(174, 149, 149)
 }
