@@ -1,3 +1,0 @@
-# Firecell
-
-The game

@@ -8,14 +8,3 @@ body {
 #title {
     color:rgb(51, 159, 123)
 }
-
-.header {
-  background-color: #a98178;
-  border: solid rgb(174, 149, 149)
-}
-
-.myCanvas {
-	border:1px solid #000000;
-  display: block;
-  margin: 0 auto;
-}
