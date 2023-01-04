@@ -1,4 +1,6 @@
-//Setting up the canvas
-const canvas = document.getElementById('myCanvas');
-const ctx = canvas.getContext('2d');
+var playerName 
+function returnText(){
+    playerName = document.getElementById('playerNameInput').value;
+    alert(playerName)
+}
 
