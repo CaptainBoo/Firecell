@@ -4,3 +4,6 @@ function returnText(){
     alert(playerName)
 }
 
+import * as testname from './test.json';
+const {name} = testname;
+console.log(name); // output 'testing'
