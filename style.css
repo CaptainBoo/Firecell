@@ -3,6 +3,7 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  font-family: Fira Code;
 }
 
 .header {
@@ -61,4 +62,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+}
+
+.playerName {
+  margin: 10px;
 }
