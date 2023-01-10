@@ -7,11 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Firecell</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira Code">
-  <link rel="stylesheet" href="\styles\style.css">
+  <link rel="stylesheet" href="\styles\header.css">
+  <link rel="stylesheet" href="\styles\body.css">
+  <link rel="stylesheet" href="\styles\page.css">
 </head>
 
 <body>
-  
   <div class="header">
     <div class="inner_header">
       <div class="logo">
@@ -21,16 +22,15 @@
         <a><li>Home</li></a>
         <a><li>About</li></a>
         <a><li>Example</li></a>
-        <a><li>Example</li></a>
+        <a><li id="logInButton">Log in</li></a> <!-- Set this to button later-->
       </ul>
-    </div>
+    </div>  
   </div>
   <div class="playerName">
     <label for="inputPlayerName">Enter the player name:</label>
-    <input id="inputPlayerName">
-    <button onclick="returnText()">Submit</button>
+    <input id="inputPlayerName" class="input">
+    <button onclick="returnText()" class="inputButton" >Submit</button>
   </div>
-  
   <script src="app.js"></script>
   <script src="getapi.js"></script>
 </body>
