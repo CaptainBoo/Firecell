@@ -55,6 +55,6 @@
     color: white;
 }
 
-#logInButton {
+.logInButton {
     background: rgb(54, 166, 129);
 }
