@@ -1,5 +1,5 @@
 var playerName;
-function returnText(asf) {
+function returnText() {
 	playerName = document.getElementById('inputPlayerName').value;
 	alert(playerName);
 }
