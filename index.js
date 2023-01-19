@@ -5,8 +5,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 import 'dotenv/config';
-import express from 'express';
 
+import express from 'express';
 const app = express();
 const port = 3000;
 
