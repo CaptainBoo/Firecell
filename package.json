@@ -1,19 +1,30 @@
 {
-  "name": "firecell",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CaptainBoo/Firecell.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CaptainBoo/Firecell/issues"
-  },
-  "homepage": "https://github.com/CaptainBoo/Firecell#readme"
+	"type": "module",
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"node-fetch": "^3.3.0"
+	},
+	"name": "firecell",
+	"version": "1.0.0",
+	"main": "index.js",
+	"devDependencies": {
+		"nodemon": "^2.0.20"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon src/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CaptainBoo/Firecell.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/CaptainBoo/Firecell/issues"
+	},
+	"homepage": "https://github.com/CaptainBoo/Firecell#readme",
+	"description": ""
 }
