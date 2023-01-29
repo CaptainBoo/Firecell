@@ -39,54 +39,6 @@ function landscapeColors(percentage) {
 		terrainType,
 	};
 }
-function landscapeColors(percentage) {
-	const colorVariety = 3;
-	const colorStep = 360 / colorVariety;
-	const colorIndex = Math.floor(percentage * colorVariety);
-	const hue =
-		colorStep * colorIndex +
-		colorStep * (percentage - (colorIndex * 100) / 3);
-	const lightness = percentage < 0.01 ? 100 : 50;
-	const saturation = 100;
-	const terrainType =
-		lightness === 100
-			? 'snow'
-			: colorIndex === 0
-			? 'mountains'
-			: colorIndex === 1
-			? 'plains'
-			: 'water';
-	return {
-		hsl: `hsl(${
-			hue < 360 ? hue : hue - 360
-		}, ${saturation}%, ${lightness}%)`,
-		terrainType,
-	};
-}
-function landscapeColors(percentage) {
-	const colorVariety = 3;
-	const colorStep = 360 / colorVariety;
-	const colorIndex = Math.floor(percentage * colorVariety);
-	const hue =
-		colorStep * colorIndex +
-		colorStep * (percentage - (colorIndex * 100) / 3);
-	const lightness = percentage < 0.01 ? 100 : 50;
-	const saturation = 100;
-	const terrainType =
-		lightness === 100
-			? 'snow'
-			: colorIndex === 0
-			? 'mountains'
-			: colorIndex === 1
-			? 'plains'
-			: 'water';
-	return {
-		hsl: `hsl(${
-			hue < 360 ? hue : hue - 360
-		}, ${saturation}%, ${lightness}%)`,
-		terrainType,
-	};
-}
 
 function draw(terrain_matrix) {
 	const ctx = canvas.getContext('2d');
