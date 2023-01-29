@@ -1,16 +1,7 @@
 {
-	"type": "module",
-	"dependencies": {
-		"dotenv": "^16.0.3",
-		"express": "^4.18.2",
-		"node-fetch": "^3.3.0"
-	},
 	"name": "firecell",
 	"version": "1.0.0",
 	"main": "index.js",
-	"devDependencies": {
-		"nodemon": "^2.0.20"
-	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "nodemon src/index.js"
