@@ -9,13 +9,6 @@ const MATRIX_DIMENSIONS = {
 };
 const COLORS = [
 	{
-		terrainType: 'snow',
-		hue: 360,
-		saturation: 100,
-		lightness: 100,
-		variance: 20,
-	},
-	{
 		terrainType: 'mountains',
 		hue: 30,
 		saturation: 50,
@@ -65,7 +58,6 @@ function draw(terrain_matrix) {
 		water: new Path2D(),
 		plains: new Path2D(),
 		mountains: new Path2D(),
-		snow: new Path2D(),
 	};
 	ctx.clearRect(0, 0, CANVAS_HEIGHT, CANVAS_WIDTH);
 	ctx.beginPath();
