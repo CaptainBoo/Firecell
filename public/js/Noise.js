@@ -7,6 +7,36 @@ const MATRIX_DIMENSIONS = {
 	pixelHeight: CANVAS_HEIGHT / MATRIX_LENGTH,
 	pixelWidth: CANVAS_WIDTH / MATRIX_LENGTH,
 };
+const COLORS = [
+	{
+		terrainType: 'snow',
+		hue: 360,
+		saturation: 100,
+		lightness: 100,
+		variance: 20,
+	},
+	{
+		terrainType: 'mountains',
+		hue: 30,
+		saturation: 50,
+		lightness: 25,
+		variance: 20,
+	},
+	{
+		terrainType: 'plains',
+		hue: 100,
+		saturation: 50,
+		lightness: 30,
+		variance: 20,
+	},
+	{
+		terrainType: 'water',
+		hue: 200,
+		saturation: 90,
+		lightness: 25,
+		variance: 10,
+	},
+];
 const canvas = document.querySelector('canvas');
 canvas.height = CANVAS_HEIGHT;
 canvas.width = CANVAS_WIDTH;
@@ -16,70 +46,11 @@ function getColor(percentage) {
 }
 
 function landscapeColors(percentage) {
-	const colorVariety = 3;
+	const colorVariety = COLORS.length;
 	const colorStep = 360 / colorVariety;
 	const colorIndex = Math.floor(percentage * colorVariety);
-	const hue =
-		colorStep * colorIndex +
-		colorStep * (percentage - (colorIndex * 100) / 3);
-	const lightness = percentage < 0.01 ? 100 : 50;
-	const saturation = 100;
-	const terrainType =
-		lightness === 100
-			? 'snow'
-			: colorIndex === 0
-			? 'mountains'
-			: colorIndex === 1
-			? 'plains'
-			: 'water';
-	return {
-		hsl: `hsl(${
-			hue < 360 ? hue : hue - 360
-		}, ${saturation}%, ${lightness}%)`,
-		terrainType,
-	};
-}
-function landscapeColors(percentage) {
-	const colorVariety = 3;
-	const colorStep = 360 / colorVariety;
-	const colorIndex = Math.floor(percentage * colorVariety);
-	const hue =
-		colorStep * colorIndex +
-		colorStep * (percentage - (colorIndex * 100) / 3);
-	const lightness = percentage < 0.01 ? 100 : 50;
-	const saturation = 100;
-	const terrainType =
-		lightness === 100
-			? 'snow'
-			: colorIndex === 0
-			? 'mountains'
-			: colorIndex === 1
-			? 'plains'
-			: 'water';
-	return {
-		hsl: `hsl(${
-			hue < 360 ? hue : hue - 360
-		}, ${saturation}%, ${lightness}%)`,
-		terrainType,
-	};
-}
-function landscapeColors(percentage) {
-	const colorVariety = 3;
-	const colorStep = 360 / colorVariety;
-	const colorIndex = Math.floor(percentage * colorVariety);
-	const hue =
-		colorStep * colorIndex +
-		colorStep * (percentage - (colorIndex * 100) / 3);
-	const lightness = percentage < 0.01 ? 100 : 50;
-	const saturation = 100;
-	const terrainType =
-		lightness === 100
-			? 'snow'
-			: colorIndex === 0
-			? 'mountains'
-			: colorIndex === 1
-			? 'plains'
-			: 'water';
+	const { terrainType, hue, saturation, lightness, variance } =
+		COLORS[colorIndex] || COLORS[COLORS.length - 1];
 	return {
 		hsl: `hsl(${
 			hue < 360 ? hue : hue - 360

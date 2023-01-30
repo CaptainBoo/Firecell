@@ -17,9 +17,5 @@
 	},
 	"homepage": "https://github.com/CaptainBoo/Firecell#readme",
 	"description": "",
-	"dependencies": {
-		"@leodeslf/perlin-noise": "^1.1.2",
-		"noisejs": "^2.1.0"
-	},
 	"type": "module"
 }
