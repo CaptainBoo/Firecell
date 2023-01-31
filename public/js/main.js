@@ -24,4 +24,4 @@ const myLevel = [
 
 const tiles = autotile(myLevel);
 
-console.log(tiles);
+console.log(tiles.flat());

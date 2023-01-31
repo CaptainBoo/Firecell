@@ -1,4 +1,4 @@
-const N = 8;
+const N = 7;
 const RANDOM_INITIAL_RANGE = 40;
 const MATRIX_LENGTH = Math.pow(2, N) + 1;
 const CANVAS_HEIGHT = MATRIX_LENGTH * 2;
