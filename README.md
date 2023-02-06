@@ -4,10 +4,6 @@
 
 Firecell is a role-playing game (RPG) written in JavaScript. This game features an immersive storyline, unique characters, and a vast world to explore. Whether you're a seasoned RPG fan or a newcomer to the genre, Firecell offers a thrilling and unforgettable gaming experience.
 
-## Requirements
-
-Firecell requires a modern browser with JavaScript enabled.
-
 ## Gameplay
 
 In Firecell, you play as a hero on a journey to defeat a powerful evil and restore peace to the land. You'll encounter various challenges and obstacles along the way, and must use your wit and skill to overcome them. As you progress through the game, you'll have the opportunity to level up your character, acquire new weapons and armor, and explore the vast world of Firecell.
