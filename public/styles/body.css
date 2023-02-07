@@ -2,23 +2,3 @@ body {
 	background-color: #ffe4de;
 	background-size: 100% 100%;
 }
-
-.playerName {
-	padding: 10px;
-}
-
-.input {
-	padding: 10px 15px;
-	margin: 8px 0;
-	border: 3px solid #101010;
-	border-radius: 4px;
-	box-sizing: border-box;
-}
-
-.inputButton {
-	border: 2px solid #101010;
-	background-color: lightgrey;
-	width: 80px;
-	height: 30px;
-	font-weight: bold;
-}

@@ -1,27 +1,24 @@
-import autotile from 'autotile';
-const myLevel = [
-	[0, 1, 0, 0, 0, 0, 0],
-	[0, 1, 0, 1, 1, 1, 0],
-	[0, 1, 1, 1, 0, 1, 0],
-	[0, 0, 0, 0, 0, 1, 0],
-	[0, 1, 1, 1, 1, 1, 0],
-	[0, 1, 0, 1, 0, 0, 0],
-	[0, 1, 1, 1, 1, 1, 0],
-	[0, 0, 0, 0, 1, 1, 1],
-	[0, 0, 0, 0, 1, 0, 0],
-	[0, 0, 0, 1, 1, 0, 0],
-	[0, 0, 0, 1, 0, 0, 0],
-	[1, 0, 1, 1, 1, 0, 1],
-	[0, 0, 1, 1, 1, 0, 0],
-	[1, 0, 1, 1, 1, 0, 1],
-	[1, 0, 0, 0, 0, 0, 1],
-	[0, 0, 1, 0, 0, 0, 0],
-	[0, 0, 1, 1, 1, 0, 0],
-	[0, 1, 1, 1, 0, 0, 0],
-	[0, 0, 0, 1, 0, 1, 1],
-	[0, 0, 0, 0, 0, 0, 0],
-];
+var config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
+    }
+};
 
-const tiles = autotile(myLevel);
+var game = new Phaser.Game(config);
 
-console.log(tiles);
+function preload ()
+{
+}
+
+function create ()
+{
+}
+
+function update ()
+{
+}
