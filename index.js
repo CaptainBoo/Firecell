@@ -8,10 +8,10 @@ import express from 'express';
 const app = express();
 const port = 3000;
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/'));
 
 app.get('/', function (req, res) {
-	res.sendFile(__dirname + '/index.html');
+	res.sendFile(__dirname + 'index.html');
 });
 
 app.listen(port, () => {
