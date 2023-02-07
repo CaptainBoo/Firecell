@@ -1,4 +1,4 @@
-<h1 align="center"><br><br><strong>Firecell RPG Game</strong></h1>
+<h1 align="center"><br><br>Firecell RPG Game</h1>
 
 ## Introduction
 
