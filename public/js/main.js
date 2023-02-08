@@ -1,4 +1,4 @@
-import Dungeon from '@mikewesthad/dungeon';
+import DungeonScene from "./dungeon-scene.js";
 
 var config = {
 	type: Phaser.AUTO,
