@@ -1,3 +1,8 @@
+import Player from './player.js';
+
+/**
+ * Scene that generates a new dungeon
+ */
 export default class DungeonScene extends Phaser.Scene {
 	preload() {
 		this.load.image(
