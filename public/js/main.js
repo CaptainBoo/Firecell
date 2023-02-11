@@ -1,11 +1,8 @@
-import DungeonScene from "./dungeon-scene.js";
-
 var config = {
 	type: Phaser.AUTO,
 	width: 800,
-	height: 480,
-	backgroundColor: '#222222',
-    parent: "game-container",
+	height: 600,
+	parent: 'game-container',
 	pixelArt: true,
 	scene: {
 		preload: preload,
@@ -15,14 +12,16 @@ var config = {
 	physics: {
 		default: 'arcade',
 		arcade: {
-			tileBias: 4,
+			gravity: { y: 0 },
 		},
 	},
 };
 
 var game = new Phaser.Game(config);
 
-function preload() {}
+function preload() {
+	this.load.image('tile', 'assets/tilesets/DungeonTileset.png');
+}
 
 function create() {}
 
