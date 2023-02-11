@@ -1,14 +1,12 @@
+import Scene from './Scene.js';
+
 var config = {
 	type: Phaser.AUTO,
 	width: 800,
 	height: 600,
 	parent: 'game-container',
 	pixelArt: true,
-	scene: {
-		preload: preload,
-		create: create,
-		update: update,
-	},
+	scene: Scene,
 	physics: {
 		default: 'arcade',
 		arcade: {
@@ -19,10 +17,3 @@ var config = {
 
 var game = new Phaser.Game(config);
 
-function preload() {
-	this.load.image('tile', 'assets/tilesets/DungeonTileset.png');
-}
-
-function create() {}
-
-function update() {}
