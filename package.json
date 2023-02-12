@@ -4,8 +4,11 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon index.js",
-		"build": "parcel build"
+		"build-watch": "parcel watch public/index.html",
+    	"start-watch": "nodemon index.js",
+    	"dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
+    	"build": "parcel build public/index.html",
+    	"start": "npm run build && node index.js"
 	},
 	"repository": {
 		"type": "git",
@@ -24,6 +27,7 @@
 	},
 	"type": "module",
 	"devDependencies": {
+		"concurrently": "^7.6.0",
 		"nodemon": "^2.0.20",
 		"parcel": "^2.8.3"
 	}
