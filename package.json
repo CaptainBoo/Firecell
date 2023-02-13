@@ -1,14 +1,14 @@
 {
 	"name": "firecell",
 	"version": "1.0.0",
-	"source": "./client/public/index.html",
+	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build-watch": "parcel watch ./client/public/index.html",
-		"start-watch": "nodemon server/index.js",
-		"dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
-		"build": "parcel build ./client/public/index.html",
-		"start": "npm run build && node server/index.js"
+		"build-watch": "parcel watch public/index.html",
+    	"start-watch": "nodemon index.js",
+    	"dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
+    	"build": "parcel build public/index.html",
+    	"start": "npm run build && node index.js"
 	},
 	"repository": {
 		"type": "git",
@@ -17,8 +17,10 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"bugs": {},
-	"url": "https://github.com/CaptainBoo/Firecell/issues",
+	"bugs": {
+		"url": "https://github.com/CaptainBoo/Firecell/issues"
+	},
+	"homepage": "https://github.com/CaptainBoo/Firecell#readme",
 	"description": "",
 	"dependencies": {
 		"express": "^4.18.2"
