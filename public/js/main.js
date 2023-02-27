@@ -1,4 +1,4 @@
-import Scene from './Scene.js';
+import DungeonScene from './DungeonScene.js';
 
 var config = {
 	type: Phaser.AUTO,
@@ -6,7 +6,7 @@ var config = {
 	height: 600,
 	parent: 'game-container',
 	pixelArt: true,
-	scene: Scene,
+	scene: DungeonScene,
 	physics: {
 		default: 'arcade',
 		arcade: {
