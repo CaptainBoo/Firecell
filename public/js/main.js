@@ -1,27 +1,19 @@
-import autotile from 'autotile';
-const myLevel = [
-	[0, 1, 0, 0, 0, 0, 0],
-	[0, 1, 0, 1, 1, 1, 0],
-	[0, 1, 1, 1, 0, 1, 0],
-	[0, 0, 0, 0, 0, 1, 0],
-	[0, 1, 1, 1, 1, 1, 0],
-	[0, 1, 0, 1, 0, 0, 0],
-	[0, 1, 1, 1, 1, 1, 0],
-	[0, 0, 0, 0, 1, 1, 1],
-	[0, 0, 0, 0, 1, 0, 0],
-	[0, 0, 0, 1, 1, 0, 0],
-	[0, 0, 0, 1, 0, 0, 0],
-	[1, 0, 1, 1, 1, 0, 1],
-	[0, 0, 1, 1, 1, 0, 0],
-	[1, 0, 1, 1, 1, 0, 1],
-	[1, 0, 0, 0, 0, 0, 1],
-	[0, 0, 1, 0, 0, 0, 0],
-	[0, 0, 1, 1, 1, 0, 0],
-	[0, 1, 1, 1, 0, 0, 0],
-	[0, 0, 0, 1, 0, 1, 1],
-	[0, 0, 0, 0, 0, 0, 0],
-];
+import DungeonScene from './DungeonScene.js';
 
-const tiles = autotile(myLevel);
+var config = {
+	type: Phaser.AUTO,
+	width: 800,
+	height: 600,
+	parent: 'game-container',
+	pixelArt: true,
+	scene: DungeonScene,
+	physics: {
+		default: 'arcade',
+		arcade: {
+			gravity: { y: 0 },
+		},
+	},
+};
 
-console.log(tiles);
+var game = new Phaser.Game(config);
+
