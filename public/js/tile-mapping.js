@@ -23,7 +23,7 @@ const TILE_MAPPING = {
 		],
 	},
 	FLOOR: [
-		{ index: 184, weight: 9 },
+		{ index: 184, weight: 19 },
 		{ index: [199, 200, 201, 202], weight: 1 },
 	],
 	// POT: [
