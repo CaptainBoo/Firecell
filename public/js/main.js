@@ -1,3 +1,4 @@
+import Phaser from 'phaser';
 import DungeonScene from './DungeonScene.js';
 
 var config = {
@@ -16,4 +17,3 @@ var config = {
 };
 
 var game = new Phaser.Game(config);
-
