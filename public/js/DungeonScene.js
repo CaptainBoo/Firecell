@@ -23,7 +23,7 @@ export default class DungeonScene extends Phaser.Scene {
 			width: 50,
 			height: 50,
 			doorPadding: 2,
-			randomSeed: 'fiftyseven',
+			// randomSeed: 'fiftyseven',
 			rooms: {
 				width: { min: 9, max: 15, onlyOdd: true },
 				height: { min: 9, max: 15, onlyOdd: true },
