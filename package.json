@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "parcel public/index.html"
+		"start": "parcel static/public/index.html"
 	},
 	"repository": {
 		"type": "git",
@@ -24,6 +24,7 @@
 	"type": "module",
 	"devDependencies": {
 		"parcel": "^2.12.0",
+		"parcel-reporter-static-files-copy": "^1.5.3",
 		"process": "^0.11.10"
 	}
 }

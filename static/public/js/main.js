@@ -10,9 +10,7 @@ var config = {
 	scene: DungeonScene,
 	physics: {
 		default: 'arcade',
-		arcade: {
-			gravity: { y: 0 },
-		},
+		arcade: { gravity: { y: 0 } },
 	},
 };
 
