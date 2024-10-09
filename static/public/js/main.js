@@ -3,7 +3,7 @@ import DungeonScene from './DungeonScene.js';
 
 var config = {
 	type: Phaser.AUTO,
-	width: 800,
+	width: screen.availWidth,
 	height: 600,
 	parent: 'game-container',
 	pixelArt: true,
