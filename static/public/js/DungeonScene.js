@@ -1,8 +1,11 @@
 import Dungeon from '@mikewesthad/dungeon';
 import Player from './player.js';
+import Slime from './slime.js';
 import TILES from './tile-mapping.js';
 
+// URLs for parcel
 import characterSpritesheetURL from '../assets/buch-characters-64px-extruded.png';
+import slimeURL from '../assets/mysticwoodspack/characters/slime.png';
 import tilesetURL from '../assets/tilesets/buch-zelda-style-tileset-32px.png';
 
 export default class DungeonScene extends Phaser.Scene {
@@ -13,6 +16,12 @@ export default class DungeonScene extends Phaser.Scene {
 			frameHeight: 64,
 			margin: 1,
 			spacing: 2,
+		});
+		this.load.spritesheet('slime', slimeURL, {
+			frameWidth: 64,
+			frameHeight: 64,
+			margin: 0,
+			spacing: 8,
 		});
 	}
 	create() {
@@ -132,6 +141,12 @@ export default class DungeonScene extends Phaser.Scene {
 			this,
 			map.widthInPixels / 2,
 			map.heightInPixels / 2
+		);
+
+		this.slime = new Slime(
+			this,
+			map.widthInPixels / 2,
+			map.heightInPixels / 2,
 		);
 
 		// Watch the player and layer for collisions, for the duration of the scene:
