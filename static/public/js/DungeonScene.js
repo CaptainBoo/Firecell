@@ -1,4 +1,5 @@
 import Dungeon from '@mikewesthad/dungeon';
+import EasyStar from 'easystarjs';
 import Player from './player.js';
 import Slime from './slime.js';
 import TILES from './tile-mapping.js';
@@ -18,10 +19,10 @@ export default class DungeonScene extends Phaser.Scene {
 			spacing: 2,
 		});
 		this.load.spritesheet('slime', slimeURL, {
-			frameWidth: 64,
-			frameHeight: 64,
+			frameWidth: 32,
+			frameHeight: 32,
 			margin: 0,
-			spacing: 8,
+			spacing: 0,
 		});
 	}
 	create() {
@@ -47,9 +48,6 @@ export default class DungeonScene extends Phaser.Scene {
 
 		this.groundLayer = map.createBlankLayer('Ground', tileset); // Wall & floor
 		this.stuffLayer = map.createBlankLayer('Stuff', tileset); // Chest, stairs, etc.
-
-		// Set all tiles in the ground layer with blank tiles (purple-black tile)
-		this.groundLayer.fill(41);
 
 		// Use the array of rooms generated to place tiles in the map
 		// Note: using an arrow function here so that "this" still refers to our scene
@@ -137,6 +135,22 @@ export default class DungeonScene extends Phaser.Scene {
 		// do for the example.
 		this.groundLayer.setCollisionByExclusion([184, 199, 200, 201, 202]);
 
+		// Initialize EasyStar
+		this.easystar = new EasyStar.js();
+		const grid = [];
+		for (let y = 0; y < map.height; y++) {
+			const col = [];
+			for (let x = 0; x < map.width; x++) {
+				const tile = this.groundLayer.getTileAt(x, y);
+				col.push(tile ? tile.index : 0);
+			}
+			grid.push(col);
+		}
+		this.easystar.setGrid(grid);
+
+		// Set acceptable tiles (non-colliding tiles)
+		this.easystar.setAcceptableTiles([184, 199, 200, 201, 202]);
+
 		this.player = new Player(
 			this,
 			map.widthInPixels / 2,
@@ -147,7 +161,27 @@ export default class DungeonScene extends Phaser.Scene {
 			this,
 			map.widthInPixels / 2,
 			map.heightInPixels / 2,
+			this.player
 		);
+
+		this.anims.create({
+			key: 'slime_walk',
+			frames: this.anims.generateFrameNumbers('slime', {
+				start: 22,
+				end: 26,
+			}),
+			frameRate: 10,
+			repeat: -1,
+		});
+		this.anims.create({
+			key: 'slime_idle',
+			frames: this.anims.generateFrameNumbers('slime', {
+				start: 0,
+				end: 3,
+			}),
+			frameRate: 10,
+			repeat: -1,
+		});
 
 		// Watch the player and layer for collisions, for the duration of the scene:
 		this.physics.add.collider(this.player.sprite, this.groundLayer);
@@ -178,5 +212,6 @@ export default class DungeonScene extends Phaser.Scene {
 
 	update(time, delta) {
 		this.player.update();
+		this.slime.update();
 	}
 }

@@ -18,6 +18,7 @@
 	"description": "",
 	"dependencies": {
 		"@mikewesthad/dungeon": "^2.0.1",
+		"easystarjs": "^0.4.4",
 		"phaser": "^3.85.2"
 	},
 	"type": "module",
